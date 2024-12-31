@@ -1,0 +1,76 @@
+.socials.row {
+    display: flex;
+    justify-content: center;
+    margin: 10px 0;
+    padding: 0;
+}
+
+.socials li {
+    list-style: none;
+    margin: 0 5px;
+}
+
+a.icon {
+    background-size: 100% 100%;
+    display: inline-block;
+    margin-right: 5px;
+    vertical-align: middle;
+}
+
+.size-10 a.icon {
+    height: 1em;
+    width: 1em;
+}
+.size-15 a.icon {
+    height: 1.5em;
+    width: 1.5em;
+}
+.size-20 a.icon {
+    height: 2em;
+    width: 2em;
+}
+.size-25 a.icon {
+    height: 2.5em;
+    width: 2.5em;
+}
+.size-30 a.icon {
+    height: 3em;
+    width: 3em;
+}
+
+a.icon::before {
+    content: "";
+    display: inline-block;
+    height: 100%;
+    width: 100%;
+    background-color: var(--text-color);
+    mask-size: contain;
+    transition: .5s;
+}
+
+* {
+    --messenger: #0084ff;
+    --facebook: #3b5998;
+    --instagram: #e4405f;
+}
+
+a[href*="m.me"]::before {
+    mask-image: url("/assets/icons/messenger.svg");
+}
+a[href*="m.me"]:hover::before {
+    background-color: var(--messenger);
+}
+
+a[href*="facebook.com"]::before {
+    mask-image: url("/assets/icons/facebook.svg");
+}
+a[href*="facebook.com"]:hover::before {
+    background-color: var(--facebook);
+}
+
+a[href*="instagram.com"]::before {
+    mask-image: url("/assets/icons/instagram.svg");
+}
+a[href*="instagram.com"]:hover::before {
+    background-color: var(--instagram);
+}

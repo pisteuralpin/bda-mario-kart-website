@@ -1,0 +1,97 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="./assets/illustrations/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/events.css">
+    <title>Brunch - Mario K'Art</title>
+</head>
+<body>
+    <section class="title">
+        <h1>MARIO K'ART</h1>
+        <h2 class="super-mario">Brunch des princesses</h2>
+        <label id="allergene-mode">
+            <input type="checkbox">Afficher les allergènes
+        </label>
+        <div class="bento bento-2c">
+            <div class="bento-box bento-box-1-1">
+                <h3 class="bento-box-title super-mario">Gateaux</h3>
+                <p class="bento-box-description">Savourez les succulents gâteaux de nos meilleurs Koopâtissiers.</p>
+                <ul>
+                    <li>Banana cake<span class="allergene">blé, tournesol, œuf</span></li>
+                    <li>Rainbow road cake<span class="allergene">blé, tournesol, œuf, lait</span></li>
+                    <li>Sablés de Dry Dry Desert<span class="allergene">blé, tournesol, œuf, lait</span></li>
+                </ul>
+            </div>
+            <div class="bento-box bento-box-1-1">
+                <h3 class="bento-box-title super-mario">Plats</h3>
+                <p class="bento-box-description">Ici, les plats ne sont pas Bal-bizarres.</p>
+                <ul>
+                    <li>Sandwiches au PesToad<span class="allergene">blé, lait, fruits à coque</span></li>
+                    <li>Feuilletés de Cheese Land<span class="allergene">blé, lait</span></li>
+                    <li>Feuilletés au PesToad<span class="allergene">blé, lait, palme, colza, fruit à coque</span></li>
+                    <li>Feuilletés du Yoshi CirCourge<span class="allergene">blé, lait, fruit à coque</span></li>
+                    <li>Donkey Cake aux olives<span class="allergene">blé, lait, œuf, fruit à coque</span></li>
+                    <li>Donkey Cake à la tomate<span class="allergene">blé, tournesol, œuf, lait, fruit à coque</span></li>
+                </ul>
+            </div>
+             <div class="bento-box bento-box-1-1">
+                <h3 class="bento-box-title super-mario">Petites folies</h3>
+                <p class="bento-box-description">Quoi de mieux qu'une fête foraine dans votre palais (de Peach).</p><br>
+                <ul>
+                    <li>Popcorn</li>
+                    <li>Barbe à Koopa</li>
+                </ul>
+            </div>
+            <div class="bento-box bento-box-1-1">
+                <h3 class="bento-box-title super-mario">Naans et crepes</h3>
+                <p class="bento-box-description">Quoi qu'en disent les rageux, Nantes c'est en Bretagne. Et en Bretagne on fait des crêpes (et des pancakes et des naans pour vous faire voyager).</p>
+                <div class="bento bento-2c">
+                    <div class="bento-box bento-box-1-1">
+                        <h4>Sucré</h4>
+                        <ul>
+                            <li>Sucre</li>
+                            <li>Nutella<span class="allergene">lait, fruit à coque</span></li>
+                            <li>Caramel beurre salé <span class="allergene">lait</span></li>
+                        </ul>
+                    </div>
+                    <div class="bento-box bento-box-1-1">
+                        <h4>Salé</h4>
+                        <ul>
+                            <li>Fondue de poireaux<span class="allergene">lait</span></li>
+                            <li>Dahl</li>
+                            <li>Chili<span class="allergene">lait, arachide</span></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+            <div class="bento-box bento-box-1-1">
+                <h3 class="bento-box-title super-mario">Boissons</h3>
+                <p class="bento-box-description">Rien de tel qu’un bon café pour commencer la journée, et un soft pour se remettre de la veille.</p><br>
+                <ul>
+                    <li>Café</li>
+                    <li>Jus de fruit</li>
+                </ul>
+            </div>
+        </div>
+    </section>
+    <nav class="pages-nav">
+        <ul class="links">
+            <li><a class="button b-button back" href="index.html">Accueil</a></li>
+            <li><a class="button x-button center" href="allos.html">Allôs</a></li>
+            <li><a class="button a-button continue" href="events.html">Événements</a></li>
+        </ul>
+    </nav>
+
+    <script src="/assets/scripts/main.js"></script>
+
+    <script>
+        document.querySelector("#allergene-mode input").addEventListener("change", function() {
+            document.querySelector("body").classList.toggle("allergene-mode");
+        });
+    </script>
+</body>
+</html>	

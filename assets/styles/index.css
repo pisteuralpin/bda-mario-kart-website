@@ -1,0 +1,325 @@
+.landing-page {
+    height: 100vh;
+    width: 100%;
+    background-color: #f5f5f5;
+    background-image: url("/assets/photos/landing-background.webp");
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: right center;
+    background-attachment: fixed;
+}
+
+h1 {
+    position: fixed; top: 50%; left: 42%;
+    transform: translateY(-50%);
+    max-width: 60%;
+
+    color: var(--color-grey-1);
+    font-size: 3rem;
+    line-height: 4rem;
+    -webkit-text-stroke: .2rem var(--color-grey-6);
+}
+
+
+@media screen and (max-width: 768px) {
+    .logo {
+        position: absolute; top: 2rem; left: 0;
+        z-index: 1;
+        width: 100%; height: 20dvh;
+        margin: 0;
+    }
+}
+@media screen and (min-width: 768px) {
+    .logo {
+        position: fixed; top: 2rem; left: 45%;
+        width: 40%; height: 30%;
+        margin: 0;
+    }    
+}
+
+.logo img {
+    width: 100%; height: 100%;
+    display: block;
+}
+
+@keyframes flag-background {
+    0% { background-position: 0; }
+    100% { background-position: 100%; }
+}
+
+.flag-background {
+    position: fixed; top: 0; left: 0;
+    width: 100%; height: 100%;
+
+    pointer-events: none;
+    overflow: hidden;
+    background-color: var(--color-grey-3-a65);
+}
+.flag-background div {
+    width: 100%; height: 100%;
+    transition: clip-path 1s;
+    mask-image: linear-gradient(70deg, rgba(0,0,0,.7) 60%, rgba(0,0,0,0) 75%);
+    mask-position: left;
+    mask-repeat: no-repeat;
+    backdrop-filter: blur(3px);
+}
+
+@media screen and (max-width: 768px) {
+    .flag-background {
+        clip-path: polygon(0 0, 53vh 0, 72vh 100%, 0 100%);
+    }
+
+    .flag-background div {
+        mask-size: auto 100%;
+    }
+
+    .flag-background div div {
+        animation: flag-background 100s infinite linear;
+    }
+}
+@media screen and (min-width: 768px) {
+    .flag-background {
+        clip-path: polygon(0 0, max(30%, 20rem) 0, max(50%, 30rem) 100%, 0 100%);
+    }
+    .flag-background div {
+        mask-size: max(50%, 30rem) 100%;
+    }
+
+    .flag-background div div {
+        animation: flag-background 400s infinite linear;
+    }
+}
+
+.flag-background div div {
+    background-image: url("/assets/illustrations/main-menu-pattern.svg");
+    background-size: 10rem;
+    position: fixed; top: -100%; left: -50%;
+    width: 200%; height: 200%;
+    opacity: .7;
+    transform: perspective(120vh) rotateX(65deg) rotateY(25deg) rotateZ(330deg);
+    transform-style: preserve-3d;
+}
+
+.main-nav {
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    height: 70%;
+}
+
+@media screen and (max-width: 768px) {
+    .main-nav {
+        padding-top: 25dvh;
+    }
+}
+
+.main-nav .primary-links {
+    display: flex;
+    flex-direction: column;
+    align-items: stretch;
+    list-style: none;
+    padding: 0; margin: 0;
+}
+
+@media screen and (max-width: 768px) {
+    .main-nav .primary-links {
+        width: fit-content;
+        margin: 0 auto;
+    }
+    .main-nav .primary-links li {
+        margin: 1rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .main-nav .primary-links li {
+        margin: 2rem 3rem;
+    }
+}
+
+.main-nav .mk-button {
+    font-size: 1.75rem;
+    font-weight: 500;
+    color: var(--color-grey-8);
+    text-shadow: 0px 2px 1px rgba(49, 49, 49,.3);
+    padding-right: 2rem;
+}
+
+.main-nav .mk-button i {
+    display: inline-block;
+    width: 2rem; height: 2rem;
+    margin-right: 2rem;
+    margin-left: .5rem;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    scale: 2.3;
+    transform: translateY(.1rem);
+    transition: transform .2s;
+}
+.main-nav .mk-button:hover i {
+    filter: drop-shadow(0px 1px .5px rgba(0,0,0,0.5));
+}
+
+.main-nav .mk-button i.toad-group {
+    background-image: url("/assets/icons/toad_group.svg");
+}
+.main-nav .mk-button:hover i.toad-group {
+    background-image: url("/assets/icons/toad_group_color.svg");
+}
+.main-nav .mk-button i.allos {
+    background-image: url("/assets/icons/mario_allos.svg");
+}
+.main-nav .mk-button:hover i.allos {
+    background-image: url("/assets/icons/mario_allos_color.svg");
+}
+.main-nav .mk-button i.controller {
+    background-image: url("/assets/icons/controller.svg");
+}
+.main-nav .mk-button:hover i.controller {
+    background-image: url("/assets/icons/controller_color.svg");
+}
+.main-nav .mk-button i.events {
+    background-image: url("/assets/icons/event.svg");
+}
+.main-nav .mk-button:hover i.events {
+    background-image: url("/assets/icons/event_color.svg");
+}
+
+
+.main-nav .secondary-links {
+    display: flex; 
+    align-items: center;
+    justify-content: start;
+    flex-wrap: wrap;
+    margin: 2rem 2rem;
+    padding: 0;
+    width: 100%;
+    position: relative; z-index: 0;
+    list-style: none;
+}
+
+@media screen and (max-width: 768px) {
+    .main-nav .secondary-links {
+        justify-content: center;
+        margin: 0;
+        margin-top: 2rem;
+    }
+}
+
+
+@media screen and (max-width: 768px) {
+    .main-nav .secondary-links li {
+        margin: 1rem;
+    }
+
+    .main-nav .secondary-links li a {
+        width: 7.5rem; height: 2.5rem;
+    }
+
+    .main-nav .secondary-links li i {
+        width: 11.25rem; height: 6.25rem;
+        position: relative; top: -1.75rem; left: -2rem;
+    }
+}
+@media screen and (min-width: 768px) {
+    .main-nav .secondary-links li {
+        margin: 0 2rem;
+    }
+
+    .main-nav .secondary-links li a {
+        width: 6rem; height: 2rem;
+    }
+
+    .main-nav .secondary-links li i {
+        width: 9rem; height: 5rem;
+        position: relative; top: -1.4rem; left: -1.6rem;
+    }
+}
+
+.main-nav .secondary-links li i {
+    display: inline-block;
+    pointer-events: none;
+    background-size: contain;
+    background-position: center;
+    background-repeat: no-repeat;
+    transition: transform .2s;
+    filter: drop-shadow(0px 2px 1px rgba(0,0,0,.3));
+}
+.main-nav .secondary-links li a:hover i {
+    transform: translateY(-.1rem) scale(1.05);
+}
+
+.main-nav .image-button i.film {
+    background-image: url("/assets/icons/film_button.svg");
+}
+.main-nav .image-button i.instagram {
+    background-image: url("/assets/icons/instagram_button.svg");
+}
+.main-nav .image-button i.facebook {
+    background-image: url("/assets/icons/facebook_button.svg");
+}
+.main-nav .image-button i.tel {
+    background-image: url("/assets/icons/tel_allos_button.svg");
+}
+
+@media screen and (max-width: 768px) {
+    .main-nav ul {
+        width: 100%;
+    }
+}
+@media screen and (min-width: 768px) {
+    .main-nav {
+        padding: 4rem 5rem;
+    }
+}
+
+
+.primary-links .selector, .secondary-links .selector {
+    opacity: 0;
+    pointer-events: none;
+    position: absolute; top: 0; left: 0;
+    transform: scale(1.1);
+    transition: opacity .2s, transform .2s;
+}
+.primary-links .selector.active, .secondary-links .selector.active {
+    opacity: 1;
+    transform: scale(1);
+}
+
+@keyframes selector-glow {
+    0% { filter: drop-shadow(0px .3rem 0px rgba(255, 246, 75, 0)) drop-shadow(0px -.3rem 0px rgba(255, 246, 75, 0)) drop-shadow(.3rem 0px 0px rgba(255, 246, 75, 0)) drop-shadow(-.3rem 0px 0px rgba(255, 246, 75, 0)) brightness(1); }
+    50% { filter: drop-shadow(0px .3rem 0px rgba(255, 246, 75, .2)) drop-shadow(0px -.3rem 0px rgba(255, 246, 75, .2)) drop-shadow(.3rem 0px 0px rgba(255, 246, 75, .2)) drop-shadow(-.3rem 0px 0px rgba(255, 246, 75, .2)) brightness(1.5); }
+}
+
+.primary-links .selector::before {
+    content: "";
+    position: absolute; top: -10%; left: -8%;
+    width: 110%; height: 120%;
+    background-image: url("/assets/illustrations/mk-button-left-selector.svg");
+    background-position: left;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    animation: selector-glow 1s infinite ease-out;
+}
+
+.primary-links .selector::after {
+    content: "";
+    position: absolute; top: -10%; right: -8%;
+    width: 110%; height: 120%;
+    background-image: url("/assets/illustrations/mk-button-right-selector.svg");
+    background-position: right;
+    background-size: auto 100%;
+    background-repeat: no-repeat;
+    animation: selector-glow 1s infinite ease-out;
+}
+
+.secondary-links .selector::before {
+    content: "";
+    position: absolute; top: -55%; left: -40%;
+    width: 190%; height: 200%;
+    background-image: url("/assets/illustrations/secondary_button_selector.svg");
+    background-position: center;
+    background-size: 100% 100%;
+    background-repeat: no-repeat;
+    animation: selector-glow 1s infinite ease-out;
+}

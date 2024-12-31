@@ -1,0 +1,239 @@
+body {
+    background-image: url("/assets/illustrations/character_selection_background.svg");
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+.character-selection {
+    display: flex;
+    margin-top: 1rem; margin-left: 2rem;
+    width: calc(60% - 2rem); min-height: calc(70% - 2rem);
+}
+@media screen and (max-width: 768px) {
+    .character-selection {
+        margin-left: 1rem;
+        padding-bottom: 7rem;
+        width: calc(100% - 2rem);
+    }    
+}
+
+.character-selector {
+    position: absolute; top: 0; left: 0; z-index: 2;
+    pointer-events: none;
+    transform: translate(-.25rem, -.25rem);
+    transition: .5s;
+}
+.character-selector::before {
+    content: "";
+    display: block;
+    width: 5.5rem; height: 5.5rem;
+    background-image: url('/assets/illustrations/character_selector.svg');
+    background-size: contain;
+}
+
+.members-list {
+    position: relative;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(5rem, 1fr));
+    grid-gap: 1rem;
+    align-items: center;
+    justify-items: center;
+    margin: 0 auto; padding: 2rem;
+    width: calc(100% - 4rem);
+    max-height: calc(100vh - 19rem);
+    overflow-y: auto;
+
+    border-radius: 1rem;
+    background-color: var(--color-grey-1-a50);
+    list-style: none;
+}
+@media screen and (max-width: 768px) {
+    .members-list {
+        padding: 1rem;
+        max-height: none;
+    }
+    
+}
+
+.member {
+    width: 5rem; height: 5rem;
+}
+
+.member-head {
+    cursor: pointer;
+    margin: 0;
+    width: 5rem; height: 5rem;
+    /* border-radius: 50%; */
+}
+
+.member-head img {
+    width: 100%; height: 100%;
+    /* border-radius: 50%; */
+    object-fit: contain;
+    filter: drop-shadow(0 .1rem 0 var(--color-grey-1)) drop-shadow(0 -.1rem 0 var(--color-grey-1)) drop-shadow(.1rem 0 0 var(--color-grey-1)) drop-shadow(-.1rem 0 0 var(--color-grey-1));
+}
+
+.member-infos {
+    pointer-events: none;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    display: none;
+    transition: opacity .25s;
+}
+.member.selected .member-infos {
+    pointer-events: auto;
+    opacity: 1;
+    display: block;
+}
+
+.member-name {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-align: center;
+    margin: .2rem 0;
+}
+
+.member-surname {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-weight: normal;
+    font-style: italic;
+    text-align: center;
+    margin: 0;
+}
+.member-surname::before {
+    content: "« ";
+}
+.member-surname::after {
+    content: " »";
+}
+
+.member-title {
+    font-family: Arial, Helvetica, sans-serif;
+    font-size: 1rem;
+    font-style: italic;
+    text-align: center;
+    margin: 5px 0;
+}
+
+.member-photo {
+    opacity: 0;
+    position: fixed; bottom: 11rem; right: 10px;
+    width: calc(30vw + 80px); height: min(38vw, 45vh);
+    transition: opacity .25s;
+    margin: 0;
+}
+.member-photo::after {
+    content: "";
+    display: block;
+    position: absolute; bottom: -20%; right: 15%; z-index: -1;
+    pointer-events: none;
+    width: 70%; height: 40%;
+    background-image: url('/assets/illustrations/MK_stand.png');
+    background-size: contain;
+    background-repeat: no-repeat;
+    background-position: center bottom;
+}
+
+.member-photo img {
+    width: 100%; height: 100%;
+    border-radius: 1rem;
+    object-fit: contain;
+}
+
+.member.selected .member-photo {
+    opacity: 1;
+}
+
+
+@media screen and (min-width: 768px) {
+    .member-infos {
+        position: fixed; top: 7rem; right: 50px;
+        width: 30%;
+        padding: 1rem 0;
+        border-radius: 1rem;
+        background-image: url("/assets/illustrations/member-info-background.svg");
+        background-size: 100%;
+        background-origin: border-box;
+        background-position: center;
+        background-repeat: no-repeat;
+    }
+
+    .member-infos * {
+        --text-color: var(--color-grey-1);
+    }
+
+    .member-infos .close {
+        display: none;
+    }
+}
+@media screen and (max-width: 768px) {
+    .member-infos {
+        position: fixed; top: calc(1rem + 3px); left: calc(1rem + 3px); z-index: 1;
+        width: calc(100vw - 2rem - 12px); height: calc(70dvh - 10rem - 12px);
+        padding: 1rem 0; padding-bottom: 30dvh;
+
+        border-radius: 1rem;
+        border: 3px solid var(--color-grey-2-a50);
+        outline: 3px solid var(--color-grey-3-a50);
+        background-color: var(--color-grey-1);
+        background-size: 100%;
+        background-origin: border-box;
+        background-position: center;
+        background-repeat: no-repeat;
+        transform-style: preserve-3d;
+    }
+    .member-infos::after {
+        content: "";
+        position: absolute; top: -11px; left: -11px; z-index: -1;
+        width: calc(100% + 19px); height: calc(100% + 19px);
+        transform: translateZ(-1px);
+
+        border-radius: calc(1rem + 6px);
+        background-color: transparent;
+        backdrop-filter: blur(1rem);
+        border: 1px solid var(--color-grey-1-a50);
+    }
+    .member-infos::before {
+        content: "";
+        position: fixed; top: calc(-11rem - 6px); left: calc(-1rem - 6px);
+        width: 100vw; height: 100vh;
+        transform: translateZ(-1px);
+
+        background-image: url("/assets/illustrations/dots_pattern.svg");
+        background-size: 3%;
+        background-color: var(--color-grey-8-a25);
+    }
+
+    .member-infos * {
+        --text-color: var(--color-grey-7);
+    }
+
+    .member-infos .close {
+        position: absolute; bottom: 1rem;
+        margin-left: 50%;
+        transform: translateX(-50%);
+        font-size: 1.25rem;
+        font-weight: 500;
+    }
+
+    .member-photo {
+        display: none;
+        position: fixed; top: 10rem; left: 50%; z-index: 2;
+        transform: translateX(-50%);
+        width: 80vw; height: 38dvh;
+    }
+    .selected .member-photo {
+        display: block;
+    }
+    .member-photo::after {
+        width: 100%; height: 100%;
+        bottom: -7dvw; left: 0;
+        background-size: 55%;
+    }
+}

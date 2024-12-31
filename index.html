@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="manifest" href="/manifest.json">
+    <link rel="icon" href="./assets/illustrations/logo.svg" type="image/x-icon">
+    <link rel="stylesheet" href="/assets/styles/main.css">
+    <link rel="stylesheet" href="/assets/styles/index.css">
+    <title>Mario K'Art</title>
+</head>
+<body>
+    <section class="landing-page">
+
+        <!-- <h1>MARIO K'ART</h1> -->
+        <figure class="logo">
+            <img src="./assets/illustrations/logo.svg" alt="Logo de Mario K'Art">
+        </figure>
+
+        <div class="flag-background"><div><div></div></div></div>
+
+        <nav class="main-nav">
+            <ul class="primary-links">
+                <span class="selector"></span>
+                <li><a class="mk-button button active" href="allos.html"><i class="allos"></i>Allôs</a></li>
+                <li><a class="mk-button button" href="members.html"><i class="toad-group"></i>Membres</a></li>
+                <li><a class="mk-button button" href="events.html"><i class="events"></i>Événements</a></li>
+                <li><a class="mk-button button" href="game.html"><i class="controller"></i>Arcade</a></li>
+            </ul>
+            <ul class="secondary-links">
+                <span class="selector"></span>
+                <li><a class="image-button button" href="" target="_blank"><i class="film"></i></a></li>
+                <li><a class="image-button button" href="" target="_blank"><i class="instagram"></i></a></li>
+                <!-- <li><a class="image-button button" href="https://facebook.com" target="_blank"><i class="facebook"></i></a></li> -->
+            </ul>
+        </nav>
+
+        <script src="/assets/scripts/main.js"></script>
+
+        <script>
+            document.querySelectorAll(".primary-links .button").forEach(button => {
+                button.addEventListener("mouseover", () => {
+                    document.querySelector(".primary-links .selector").classList.add("active");
+                    document.querySelector(".primary-links .selector").style.left = button.offsetLeft + "px";
+                    document.querySelector(".primary-links .selector").style.top = button.offsetTop + "px";
+                    document.querySelector(".primary-links .selector").style.width = button.offsetWidth + "px";
+                    document.querySelector(".primary-links .selector").style.height = button.offsetHeight + "px";
+                });
+                button.addEventListener("mouseout", () => {
+                    document.querySelector(".primary-links .selector").classList.remove("active");
+                });
+            });
+            document.querySelectorAll(".secondary-links .button").forEach(button => {
+                button.addEventListener("mouseover", () => {
+                    document.querySelector(".secondary-links .selector").classList.add("active");
+                    document.querySelector(".secondary-links .selector").style.left = button.offsetLeft + "px";
+                    document.querySelector(".secondary-links .selector").style.top = button.offsetTop + "px";
+                    document.querySelector(".secondary-links .selector").style.width = button.offsetWidth + "px";
+                    document.querySelector(".secondary-links .selector").style.height = button.offsetHeight + "px";
+                });
+                button.addEventListener("mouseout", () => {
+                    document.querySelector(".secondary-links .selector").classList.remove("active");
+                });
+            });
+        </script>
+
+        <script type="speculationrules">
+            {
+              "prefetch": [
+                {
+                  "source": "list",
+                  "urls": ["assets/icons/mario_allos.svg", "assets/icons/mario_allos_color.svg", "assets/icons/toad_group.svg", "assets/icons/toad_group_color.svg", "assets/icons/events.svg", "assets/icons/events_color.svg", "assets/icons/controller.svg", "assets/icons/controller_color.svg", "assets/icons/film_button.svg", "assets/icons/instagram_button.svg", "assets/icons/facebook_button.svg"]
+                }
+              ]
+            }
+          </script>
+    </section>
+</body>
+</html>

@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8" standalone="no"?>
+<!-- Created with Inkscape (http://www.inkscape.org/) -->
+
+<svg
+   width="26.458334mm"
+   height="26.458334mm"
+   viewBox="0 0 26.458334 26.458334"
+   version="1.1"
+   id="svg1"
+   xmlns="http://www.w3.org/2000/svg"
+   xmlns:svg="http://www.w3.org/2000/svg">
+  <defs
+     id="defs1">
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter25"
+       x="-0.52800003"
+       y="-0.52800003"
+       width="2.0560001"
+       height="2.0560001">
+      <feGaussianBlur
+         stdDeviation="0.58208334"
+         id="feGaussianBlur25" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter26"
+       x="-0.52800003"
+       y="-0.52800003"
+       width="2.0560001"
+       height="2.0560001">
+      <feGaussianBlur
+         stdDeviation="0.58208334"
+         id="feGaussianBlur26" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter27"
+       x="-0.52800003"
+       y="-0.52800003"
+       width="2.0560001"
+       height="2.0560001">
+      <feGaussianBlur
+         stdDeviation="0.58208334"
+         id="feGaussianBlur27" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter28"
+       x="-0.52800003"
+       y="-0.52800003"
+       width="2.0560001"
+       height="2.0560001">
+      <feGaussianBlur
+         stdDeviation="0.58208334"
+         id="feGaussianBlur28" />
+    </filter>
+    <filter
+       style="color-interpolation-filters:sRGB"
+       id="filter29"
+       x="-0.52800003"
+       y="-0.52800003"
+       width="2.0560001"
+       height="2.0560001">
+      <feGaussianBlur
+         stdDeviation="0.58208334"
+         id="feGaussianBlur29" />
+    </filter>
+  </defs>
+  <g
+     id="layer1"
+     transform="translate(-8.0685635,-30.35317)">
+    <circle
+       style="opacity:0.25;fill:#ffffff;fill-opacity:1;stroke-width:0.794152;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;filter:url(#filter29)"
+       id="path22"
+       cx="8.0685635"
+       cy="30.35317"
+       r="1.3229166" />
+    <circle
+       style="opacity:0.25;fill:#ffffff;fill-opacity:1;stroke-width:0.79415;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;filter:url(#filter28)"
+       id="circle22"
+       cx="34.526897"
+       cy="30.35317"
+       r="1.3229166" />
+    <circle
+       style="opacity:0.25;fill:#ffffff;fill-opacity:1;stroke-width:0.79415;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;filter:url(#filter27)"
+       id="circle23"
+       cx="34.526897"
+       cy="56.811504"
+       r="1.3229166" />
+    <circle
+       style="opacity:0.25;fill:#ffffff;fill-opacity:1;stroke-width:0.79415;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;filter:url(#filter26)"
+       id="circle24"
+       cx="8.0685635"
+       cy="56.811504"
+       r="1.3229166" />
+    <circle
+       style="opacity:0.25;fill:#ffffff;fill-opacity:1;stroke-width:0.79415;stroke-linecap:round;stroke-linejoin:round;paint-order:markers stroke fill;filter:url(#filter25)"
+       id="circle25"
+       cx="21.297731"
+       cy="43.582336"
+       r="1.3229166" />
+  </g>
+</svg>

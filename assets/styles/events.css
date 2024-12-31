@@ -1,0 +1,26 @@
+section {
+    padding-bottom: 5rem;
+}
+
+@media screen and (min-width: 768px) {
+    #allergene-mode {
+        position: absolute;
+        top: 6rem; right: 2rem;
+    }
+}
+@media screen and (max-width: 768px) {
+    #allergene-mode {
+        display: flex;
+        justify-content: center;
+    }
+}
+
+.allergene {
+    display: none;
+    font-weight: bold;
+    font-style: italic;
+    margin-left: 1rem;
+}
+.allergene-mode .allergene {
+    display: inline;
+}
